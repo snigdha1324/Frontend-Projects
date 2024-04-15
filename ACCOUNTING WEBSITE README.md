@@ -16,6 +16,7 @@ Explore: Explore the different sections of the website, including home, about us
 Manage Finances: Use the interactive cards and dynamic button features to manage your finances effectively.
 
 How to View the Website
+
 Download or clone the repository to your local machine.
 Open the HTML files using a web browser to view the different pages of the website.
 Ensure that the CSS files and image folder are in the same directory as the HTML files to display the website with styles and images.
