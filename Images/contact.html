@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>   
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="stylesheet" href="header-footer.css" />
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+.arrow-icon {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+}
+
+/* CSS for the backgound image */
+
+
+/* Additional CSS */
+/* Your existing CSS styles go here */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: #3ac0ce;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bdc89e;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+.home {
+    padding-top: 7rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .image {
+    flex: 1 1 45rem;
+}
+
+.home .image img {
+    width: 90%;
+    margin-top: 5rem;
+}
+
+.home .content {
+    flex: 1 1 45rem;
+}
+
+.home .content h1 {
+    font-size: 3.7rem;
+    padding-block-end: 1rem 0;
+    color: #333;
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: #666;
+    padding-bottom: 4rem;
+}
+
+.home .content .home-btn {
+    padding: 1.3rem 2rem;
+    background-color: #f9485d;
+    color: #ffe9e9;
+    font-size: 1.4rem;
+    border: 2px solid #f9485d;
+    border-radius: .5rem;
+}
+
+.home .content .home-btn:hover {
+    background-color: #f9485da4;
+    box-shadow: none;
+    color: #fff;
+}
+/* home-header ends*/
+
+/* dropdown starts*/
+
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.form-container.body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 30%;
+}
+
+/* Container for Form and Image */
+.container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    margin: 30;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 700px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    margin-top: 30px; /* Adjust top margin as needed */
+}
+
+
+.form-container h2 {
+    background-color: #3abfce;
+    color: #fff;
+    padding: 20px;
+    font-size: 19px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+/* Form Inputs */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container input[type="location"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 2px solid #bdc89eb7;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #333;
+}
+.form-container label{
+    font-size: 15px;
+}
+.form-container textarea {
+    height: 150px; /* Adjust height for textarea */
+}
+
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Image */
+
+
+
+        
+     
+
+        .form-container textarea {
+    height: 100px; /* Adjust height for textarea */
+}
+
+</style>
+</head>
+<body>
+ <!-- navbar sections starts  -->
+ <header class="header">
+    <a href="homepage1.html" class="logo">
+        <img src="https://accountingcloud.in/wp-content/uploads/2023/10/cropped-cropped-cropped-CompressJPEG.online_512x512_image-1.jpg" alt="logo-bookmark">
+    </a>
+
+  <!-- Inside the <nav> element -->
+<nav class="navbar">
+    <a href="homepage1.html">Home</a>
+
+    <a href="aboutus.html">About Us</a>
+    <div class="dropdown"  onmouseover="showDropdown()">
+    <a href="#services">Services <span class="arrow-icon">&#xf0d7;</span></a>
+    <div class="dropdown-content">
+        <a href="bookkeeping.html">Bookkeeping</a>
+        <a href="CFO.HTML">CFO</a>
+        <a href="ARANDAP.HTML">AR & AP</a>
+        <a href="TAX Filing.HTML">Tax Filing</a>
+        <a href="GST Filing.HTML">GST Filing</a>
+        <a href="TENDERS & PROJECTIONS.HTML">Tenders & Projections</a>
+        <!-- Add more services as needed -->
+    </div>
+</div>
+<a href="pricing.html">Pricing</a>
+<div class = "dropdown"  onmouseover="showDropdown()">
+<a href="#">Support<span class="arrow-icon">&#xf0d7;</span></a>
+<div class="dropdown-content">
+    <a href="BLOGS.HTML">Blogs</a>
+    <a href="FAQS.html">FAQs</a>
+</div>
+</div>
+<a href="contact.html">Contact Us</a>
+
+<a href="#" class="btn">Log in</a>
+<a href="#" class="btn">Sign up</a>
+</nav>
+
+
+    <div class="fas fa-bars" id="menu-btn"></div>
+
+</header>
+
+<!-- navbar sections ends  -->
+<hr>
+
+<!-- home section stars  -->
+
+<section class="home" id="home">
+    
+    <div class="image">
+        <img src="images\contact.png" alt="yet-to-come">
+    </div>
+    <div class="content">
+        <h1>Request a Call Back?</h1>
+        <p>Contact us today to kickstart your journey towards financial success. Our team is ready to assist you with tax planning, financial consulting, and accounting services.</p>
+
+            <a href="#form-section" class="home-btn">Get Started</a>
+        </div>
+
+</section>
+
+<section class="form-section" id="form-section">
+
+   
+<div class="form-container">
+    <!-- Basic Information -->
+    <h2> Make an Appointment
+    </h2>
+    <form id="mainForm" action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." required >
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" placeholder="Your email.."required >
+
+        <label for="number">Mobile Number:</label>
+        <input type="tel" id="number" name="phone" pattern="{^\+?[0-9-]+$}" placeholder="Your Number.."required >
+
+        <label for="message">Your message <span>(optional)</span></label>
+        <textarea id="message" name="message" placeholder="Your message..." rows="6"></textarea>
+        
+        <br>
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+  
+</div>  
+</form>
+</section>
+
+<section class="footer" id="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-chevron-right"></i>Services<span class="arrow-icon">&#xf0d7;</span></a>
+                <div class="dropdown-content">
+                    <a href="bookkeeping.html">Bookkeeping</a>
+            <a href="CFO.HTML">CFO</a>
+            <a href="ARANDAP.HTML">AR & AP</a>
+            <a href="TAX Filing.HTML">Tax Filing</a>
+            <a href="GST Filing.HTML">GST Filing</a>
+            <a href="TENDERS & PROJECTIONS.HTML">Tenders & Projections</a>
+                    <!-- Add more services as needed -->
+                </div>
+            </div>
+            <a href="#"><i class="fas fa-chevron-right"></i>Pricing</a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-chevron-right"></i>Support<span class="arrow-icon">&#xf0d7;</span></a>
+                <div class="dropdown-content">
+                    <a href="BLOGS.HTML">Blogs</a>
+                    <a href="FAQS.html">FAQs</a>
+                    <!-- Add more support links as needed -->
+                </div>
+            </div>
+        </div>
+
+           <div class="box">
+               <h3>Contact Us</h3>
+      
+               <a href="https://www.google.com/maps/place/Gowra+FountainHead/@17.4437971,78.3805477,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb93e01511d911:0x104e7368bcfb0af1!8m2!3d17.443792!4d78.3831226!16s%2Fg%2F11f3rxzhkr?entry=ttu" target="_blank"><i class="fas fa-map-marker-alt"></i>Unit No.709, Gowra FountainHead, HUDA Techno Enclave, Hyderabad, Telangana – 500081 info@accountingcloud.in</a>
+               <a href="#"><i class="fas fa-envelope"></i> info@accountingcloud.in</a>
+
+               <a href="#"><i class="fas fa-phone"></i> +91 89779 44578</a>
+           </div>
+
+           <div class="box">
+            <h3>Subscribe Now</h3>
+            <a href="#">Don’t miss our future updates! Get Subscribed Today!</a>
+
+            <form action="#" method="post" class="subscribe-form">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-email"><i class="fas fa-envelope"></i></button>
+            </form>
+        </div>
+        
+       </div>
+    </section>
+
+       <div class="credit">
+       <h6 > © Copyright 2023 Accounting Cloud . All Rights Reserved.</h6>
+       </div>
+   
+
+    <!-- footer section ends -->
+
+<script>
+    // Add scroll event listener
+window.addEventListener('scroll', function() {
+    // If the page is scrolled
+    if (window.scrollY > 0) {
+        // Add the "scrolled" class to the body
+        document.body.classList.add('scrolled');
+    } else {
+        // Remove the "scrolled" class from the body
+        document.body.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+
+</html>

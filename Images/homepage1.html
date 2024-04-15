@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+/* Targeting all hr elements */
+
+
+
+.arrow-icon {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+}
+.arrow-icon {
+    transition: color 0.3s ease; /* Apply transition to color property */
+}
+
+
+.header .logo img {
+    width: 120px;
+    height: auto;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: #3ac0ce;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bdc89e;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.heading h1 {
+    padding-bottom: 2rem;
+}
+
+.heading p {
+    max-width: 60rem;
+    margin: auto;
+    color: #666;
+    font-size: 1.7rem;
+}
+
+.all-btn {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background-color: #3ac0ce;
+    border-radius: .5rem;
+    color: #fff;
+}
+
+.all-btn:hover {
+    background-color: transparent;
+    color: #3ac0ce;
+    border: 2px solid #3ac0ce;
+}
+
+.header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 0;
+    z-index: 10000;
+    background-color: #fff;
+    box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .navbar a {
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+    color: #3ac0ce;
+}
+
+.header .navbar .btn {
+    padding: .6rem 3rem;
+    background-color: #3ac0ce;
+    color: #fff;
+    border-radius: .5rem;
+}
+
+
+.header .navbar .btn:hover {
+    color: #3ac0ce;
+    background-color: transparent;
+   
+}
+
+#menu-btn {
+    padding: 1rem 1rem;
+    background-color: #eee;
+    font-size: 3rem;
+    color: #2196F3;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        box-shadow: 0.5rem 0.5rem 0 hsla(231, 69%, 60%);
+        width: 33rem;
+        border-radius: .5rem;
+        border: 2px solid #2196F3;
+        background-color: #fff;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+    }
+
+    .header .navbar a {
+        margin: 2.5rem;
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+
+.home {
+    padding-top: 7rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .image {
+    flex: 1 1 45rem;
+}
+
+.home .image img {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.home .content {
+    flex: 1 1 45rem;
+}
+
+.home .content h1 {
+    font-size: 2.75rem;
+    padding-block-end: 1rem 0;
+    color: #333;
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: #666;
+    padding-bottom: 4rem;
+}
+
+.home .content .home-btn {
+    padding: 1.3rem 2rem;
+    background-color: #f9485d;
+    color: #fff;
+    font-size: 1.4rem;
+    border: 2px solid #f9485d;
+    border-radius: .5rem;
+}
+
+.home .content .home-btn:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: #f9485d;
+}
+/* home-header ends*/
+
+/* dropdown starts*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition-delay: 10s;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+/* dropdown ends*/
+
+/* flipcard starts*//* Accounting Services Section */
+.accounting-services {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-top: -10rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Add space between items */
+}
+
+.service-item {
+    width: calc(40% - 20px); /* 50% width with gap */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+
+.service-item:nth-child(2n) {
+    margin-left: 20px; /* Add space between items */
+}
+
+.service-item img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.service-item h2 {
+    font-size: 18px;
+    color: #333; /* Adjust to match your page */
+    font-family: Arial, sans-serif; /* Adjust font family */
+    margin-bottom: 8px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666; /* Adjust to match your page */
+    font-family: Arial, sans-serif; /* Adjust font family */
+    line-height: 1.5;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .service-item {
+        width: calc(50% - 20px); /* 50% width with gap */
+    }
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .service-item {
+        width: calc(100% - 20px); /* Full width with gap */
+    }
+}
+
+/* Animation for service items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to service items */
+.service-item.animate {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.flipcardabove {
+    padding-top: 7rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2%;
+}
+
+.flipcardabove .image {
+    flex: 1 1 45rem;
+}
+
+.flipcardabove .image img {
+    width: 90%;
+    margin-top: 5rem;
+    order: 2; /* Set the order of the image */
+}
+
+.flipcardabove .content {
+    flex: 1 1 45rem;
+    order: 1; /* Set the order of the content */
+}
+
+.flipcardabove .content h1 {
+    font-size: 2.75rem;
+    padding-block-end: 1rem 0;
+    color: #333;
+}
+
+.flipcardabove .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: #666;
+    padding-bottom: 4rem;
+}
+
+/*flipcard ends*/
+/* cards start */
+/* Reset default styles */
+
+
+/* Container styles */
+/* Reduce spacing around cardcontainer */
+.cardcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0; /* Adjust the top and bottom padding */
+    margin-bottom: 10rem; /* Adjust the bottom margin */
+    opacity: 0;
+    animation: slideIn 3s ease-in-out forwards;
+    margin-top: -10rem; /* Adjust the top margin to counteract the margin-top added by .flipcardabove */
+}
+/* Reduce spacing around card */
+.card {
+    width: 300px;
+    height: auto;
+    background-color: #ffffff;
+    margin: 10px; /* Adjust margin */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 2px 2px 2px 6px #3abfceb9;
+    transform: translateY(100px); /* Initially hidden */
+    transition: transform 0.5s ease;
+}
+.card:nth-child(even)  {
+    width: 300px;
+    height: auto;
+    background-color: #ffffff;
+    margin: 5px; /* Adjust margin */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 2px 2px 2px 6px #bdc89e8c;
+    transform: translateY(100px); /* Initially hidden */
+    transition: transform 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* Card styles */
+
+
+/* Content styles */
+.content {
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Learn More link styles */
+.learn-more {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #f9485dce;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #f9485dce;
+  margin-bottom: 10px;
+}
+
+.learn-more:hover {
+  background-color: transparent;
+  color: #f9485dce;
+}
+
+.cardcontainerabove {
+    padding-top: 3rem; /* Adjust the top padding */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.cardcontainerabove .content h1 {
+    font-size: 2.75rem;
+    color: #333;
+}
+
+.cardcontainerabove .content p {
+    font-size: 1.7rem;
+    max-width: auto;
+    color: #666;
+   
+}
+
+/* cards end*/
+
+/*websiteinwebsite starts */
+/* Target the scrollbar within the scrollable-content */
+.scrollable-content::-webkit-scrollbar {
+  width: 4px; /* width of the scrollbar */
+  height: 3px;
+}
+
+/* Track */
+.scrollable-content::-webkit-scrollbar-track {
+  background: #d8dbdb; /* color of the track */
+}
+
+/* Handle */
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #3abfce; /* color of the scrollbar handle */
+}
+
+/* Handle on hover */
+
+
+.scrollable-content {
+    height: 500px; /* Set a fixed height for scrolling */
+    margin-bottom: 25px;
+    width: 1200px;
+    margin-left: -10rem;
+margin-bottom: 40%;
+}
+
+
+.scrollable-content .content-and-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px; /* Adjust spacing between content and image */
+    margin-left: 0px;
+
+
+}
+
+.scrollable-content.odd .content {
+    order: 2; /* Set content to appear first for odd sections */
+}
+
+.scrollable-content.even .content {
+    order: 1; /* Set content to appear second for even sections */
+}
+
+.scrollable-content.image {
+    width: 50%; /* Adjust width as needed */
+}
+
+.scrollable-content.content {
+    width: 50%; /* Adjust width as needed */
+}
+
+.scrollable-content.image img {
+    max-width: 100%; /* Ensure image fits container */
+}
+
+
+/*websiteinwebsite starts */
+/*why us starts */
+/* Add your CSS styles here */
+/* Add your CSS styles here */
+
+.whyus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    padding: 4rem;
+    background-color: #3abfce1a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+    margin-bottom: 3%;
+}
+
+.whyus.content {
+    flex: 1;
+}
+
+
+.whyus h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    list-style-type: none;
+
+}
+.whyus.choose ul {
+    list-style: none;
+    padding: 0;
+    color: #3ac0ce;
+    list-style-type: none;
+}
+
+.whyus.choose li {
+    margin-bottom: 2rem;
+    list-style-type: none;
+
+}
+
+.whyus.choose h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.whyus .choose h2 i {
+    margin-right: 1rem;
+    color: #f9485d; /* Corrected color code */
+    list-style: none;
+}
+
+.whyus.choose p {
+    padding-left: 2rem;
+}
+
+/* footersection starts*/
+.footer{
+    background-color:  #bdc89e8c;
+    z-index: 1; /* Add this line */
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+   
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #000;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: #000000;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: #0b91a0;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 1rem;
+}
+.footer .box-container .box .subscribe-form {
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container .box .subscribe-form input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    
+}
+
+.footer .box-container .box .subscribe-form .btn-email {
+    background-color: #3ac0ce;
+   
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+   border: 1px solid #3ac0ce;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.footer .box-container .box .subscribe-form .btn-email:hover {
+    background-color: transparent;
+    border-color: #3ac0ce;
+
+}
+.footer .box-container .box .subscribe-form .btn-email i {
+    color: #000000; /* Set default color of the icon */
+    transition: color 0.3s; /* Add transition for color change */
+}
+
+.footer .box-container .box .subscribe-form .btn-email:hover i {
+    color: #3ac0ce; /* Change color of the icon on hover */
+}
+/* footer section end*/
+.credit {
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center; /* Center text horizontally */
+    font-size: 2rem;
+    color: #000;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    margin: 0 auto; /* Horizontally center the section */
+    max-width: 800px; /* Adjust maximum width as needed */
+}
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- navbar sections starts  -->
+    <header class="header">
+        <a href="homepage1.html" class="logo">
+            <img src="https://accountingcloud.in/wp-content/uploads/2023/10/cropped-cropped-cropped-CompressJPEG.online_512x512_image-1.jpg" alt="logo-bookmark">
+        </a>
+
+      <!-- Inside the <nav> element -->
+<nav class="navbar">
+
+    <a href="aboutus.html">About Us</a>
+    <div class="dropdown" onmouseover="showDropdown()">
+    <a style="cursor: pointer;">Services<span class="arrow-icon">&#xf0d7;</span></a>
+    <div class="dropdown-content">
+        <a href="bookkeeping.html">Bookkeeping</a>
+        <a href="CFO.HTML">CFO</a>
+        <a href="ARANDAP.HTML">AR & AP</a>
+        <a href="TAX Filing.HTML">Tax Filing</a>
+        <a href="GST Filing.HTML">GST Filing</a>
+        <a href="TENDERS & PROJECTIONS.HTML">Tenders & Projections</a>
+        <!-- Add more services as needed -->
+    </div>
+</div>
+
+    <a href="pricing.html">Pricing</a>
+    <div class = "dropdown"  onmouseover="showDropdown()">
+    <a href="#">Support<span class="arrow-icon">&#xf0d7;</span></a>
+    <div class="dropdown-content">
+        <a href="BLOGS.HTML">Blogs</a>
+        <a href="FAQS.html">FAQs</a>
+    </div>
+    </div>
+    <a href="contact.html">Contact Us</a>
+
+    <a href="#" class="btn">Log in</a>
+    <a href="#" class="btn">Sign up</a>
+</nav>
+
+
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+    <!-- navbar sections starts  -->
+<hr>
+   
+    <!-- home section stars  -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h1>Experience quick, friendly, year-end support from our expert accounting team.</h1>
+            <p>We’re here to make running your business easier. Month-on-month and year-end, our team of professional accountants will ensure your books are in perfect financial harmony.</p>
+
+            <a href="#" class="home-btn">Get Started</a>
+        </div>
+
+
+        <div class="image">
+            <img src="images\yettocome.png" alt="yet-to-come">
+        </div>
+    </section>
+
+    <!-- home section ends -->
+<hr>
+   <!-- flipcardsection starts -->
+   <section class="flipcardabove" id="flipcardabove">
+
+    <div class="content">
+        <h1>Discover the Accounting Cloud gamut of Accounting Services for all types of business!</h1>
+        <p>Every business requires efficient accounting solutions. Our dedicated team of expert bookkeepers is committed to provide customized solutions and services for small, medium and large businesses, meeting their unique accounting needs. We excel in delivering accurate financial budgets, forecasts, management within specified timelines and budget</p>
+</div>
+<div class="image">
+    <img src="images\trusted.png" alt="yet-to-come">
+</div>
+   </section>
+   <section class="accounting-services" id="accounting-services">
+    <div class="container">
+        <div class="service-item">
+            <img src="images/accounting.png" alt="Accounting Image">
+            <h2>Need Accounting?</h2>
+            <p>We are experts in bookkeeping. Serving hundreds of clients for the last two decades with our expert bookkeepers to get their books up-to-date. Need running accounting for your business? You can focus on your business and we will keep your books up to date and also facilitate monthly / quarterly GST returns & year month-end income tax returns.</p>
+        </div>
+        <!-- Add more service items as needed -->
+        <div class="service-item">
+            <img src="images/balclogs.png" alt="Backlogs Image">
+            <h2>Backlogs in accounting?</h2>
+            <p>Our team can work with you to get confined for solving your business requirements, filing for insolvency proceedings, or creating records for long pending legal requirements or for preparing any payment summaries.</p>
+        </div>
+        <div class="service-item">
+            <img src="images/gst.png" alt="GST Image">
+            <h2>Got a GST notice or Income Tax Notice?</h2>
+            <p>Worried about notices? Faceless assessments require only data and answers for the queries raised by departments. Dump your old books & records on us, we will reconcile and prepare necessary replies for the notices received and reconcile with the historical or audited records.</p>
+        </div>
+        <div class="service-item">
+            <img src="images/startup.png" alt="Startup Image">
+            <h2>Due diligence in cards for your startup!</h2>
+            <p>With our expert team, your work will be simplified! We create war rooms during your due diligence period and help you to get ready for all the checklists as per Indian and overseas legal and accounting teams.</p>
+        </div>
+    </div>
+</section>
+
+
+  <!-- flipcardsection ends -->
+<hr>
+<!-- cards start-->
+<section class="cardcontainerabove" id="cardcontainerabove">
+
+    <div class="content">
+        <p>We believe scaling startups require a radically different kind of consultants.        </p>
+        <h1>Small Businesses. Perfect Books.        </h1>
+
+    </div>
+
+   </section>
+    <div class="cardcontainer">
+        <div class="card">
+          <div class="content">
+            <h2>Accurate financials you can rely on</h2>
+            <p>We’ll connect you with one of our accountants and they’ll get to know your business, deliver monthly books and year-end financials along with periodical GST compliances.</p>
+            <br>
+            <a href="#" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Internal review of books</h2>
+            <p>Upon finalizing the financial statements and closing the books, our accounts team’s work undergoes an internal peer review by our in-house expert team to ensure accuracy and quality.</p>
+            <br><a href="#" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>Year-round advisory</h2>
+            <p>Our Premium package offers year-long tax advisory services, providing custom tax planning tailored to your business needs with accessible advisors for comprehensive support.</p>
+            <br> <a href="#" class="learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    
+   
+
+  <!-- cards ends-->
+  <hr>
+  <!-- websiteinwebsite starts -->
+ > <section class="cardcontainerabove" id="cardcontainerabove">
+
+    <div class="content">
+        <h1>Exits in business? </h1>
+        <h1>Your search for Accounting support ends here! </h1>
+
+    </div>
+ 
+
+<section id="scrollable-section" class="section">
+    <div class="scrollable-content">
+        <div class="content-and-image">
+            <div class="content">
+                <h2>Selling mode</h2>
+                <p>This is the era of business exits! As perception changes, accounting methodology changes. Count on us for the transition mode. Our war room strategy worked out for a couple of clients as both buyers and sellers are happy and of course, we were made happy with our pay cheques by business houses.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="image">
+                <img src="images\sellingmode.png" alt="yet-to-come">
+            </div>
+        </div>
+
+        <div class="content-and-image">
+            <div class="image">
+                <img src="images\businessinsouth.png" alt="yet-to-come">
+            </div>
+            <div class="content">
+                <h2>Business in South direction!</h2>
+                <p>When business is in a downward trend, support is limited from various stakeholders. Over the decades, we could help a couple of companies in their bad phase and helped them to keep books upright within their budgets.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+        <div class="content-and-image">
+            <div class="content">
+                <h2>Threat of Insolvency proceedings</h2>
+                <p>When positivity and reality meet, the challenges posed by troubling creditors can be mitigated tactically with cash flow Management. Our experience in the business may help the business entity to come out of the turbulence. Contact us in strict confidence, if you are really looking for fixing your accounting problems during lean period.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="image">
+                <img src="images\threatinsolvency.png" alt="yet-to-come">
+            </div>
+        </div>
+
+        <div class="content-and-image">
+            <div class="image">
+                <img src="images\mergers.png" alt="yet-to-come">
+            </div>
+            <div class="content">
+                <h2>Mergers and Takeovers!</h2>
+                <p>External support during takeovers and mergers not only reduces costs but also time. When experience adds favour to your takeover mode, the synergy is invaluable. We can fit into your time & budget mode. Try with confidence our services.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- websiteinwebsite ends -->
+<!--why us starts -->
+<section class="whyus" id="whyus">
+    <div class="content">
+        <h1>Why Choose Us?</h1>
+        <div class="choose">
+            <ul style="list-style-type: none;">
+                <li>
+                    <h2><i class="fas fa-check-circle"></i> Effortless Sign-Up</h2>
+                    <p>Our simple sign-up process begins with a friendly conversation to grasp your immediate needs and understand your business requirements thoroughly.</p>
+                </li>
+                <li>
+                    <h2><i class="fas fa-chart-line"></i> Monthly Accounting Made Easy</h2>
+                    <p>Trust our dedicated team to meticulously organize your business transactions and prepare accurate financial statements every month. We'll keep you informed and reach out if we need any additional information.</p>
+                </li>
+                <li>
+                    <h2><i class="fas fa-file-alt"></i> Seamless GST Filings</h2>
+                    <p>Stay compliant with the latest GST regulations effortlessly. We'll summarize your input and output credits and ensure timely filing of your monthly GST returns, leveraging insights from your business.</p>
+                </li>
+                <li>
+                    <h2><i class="fas fa-money-bill-wave"></i> Tax-Ready Financials</h2>
+                    <p>Our comprehensive monthly financial reports enable you to monitor your business's financial health effectively. When tax season arrives, we'll provide all necessary documentation required for ITR filing. Alternatively, opt for our premium plans, and we'll handle the entire e-filing process for you.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+  
+</section>
+<!--why us ends -->
+
+    <!-- footer section starts  -->
+
+   <section class="footer" id="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
+            <div class="dropdown">
+                <a ><i class="fas fa-chevron-right"></i>Services<span class="arrow-icon">&#xf0d7;</span></a>
+                <div class="dropdown-content">
+                    <a href="bookkeeping.html">Bookkeeping</a>
+                    <a href="CFO.HTML">CFO</a>
+                    <a href="ARANDAP.HTML">AR & AP</a>
+                    <a href="TAX Filing.HTML">Tax Filing</a>
+                    <a href="GST Filing.HTML">GST Filing</a>
+                    <a href="TENDERS & PROJECTIONS.HTML">Tenders & Projections</a>
+                    <!-- Add more services as needed -->
+                </div>
+            </div>
+            <a href="#"><i class="fas fa-chevron-right"></i>Pricing</a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-chevron-right"></i>Support<span class="arrow-icon">&#xf0d7;</span></a>
+                <div class="dropdown-content">
+                    <a href="BLOGS.HTML">Blogs</a>
+                    <a href="FAQS.html">FAQs</a>
+                    <!-- Add more support links as needed -->
+                </div>
+            </div>
+        </div>
+
+           <div class="box">
+               <h3>Contact Us</h3>
+      
+               <a href="https://www.google.com/maps/place/Gowra+FountainHead/@17.4437971,78.3805477,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb93e01511d911:0x104e7368bcfb0af1!8m2!3d17.443792!4d78.3831226!16s%2Fg%2F11f3rxzhkr?entry=ttu" target="_blank"><i class="fas fa-map-marker-alt"></i>Unit No.709, Gowra FountainHead, HUDA Techno Enclave, Hyderabad, Telangana – 500081 info@accountingcloud.in</a>
+               <a href="#"><i class="fas fa-envelope"></i> info@accountingcloud.in</a>
+
+               <a href="#"><i class="fas fa-phone"></i> +91 89779 44578</a>
+           </div>
+
+           <div class="box">
+            <h3>Subscribe Now</h3>
+            <a href="#">Don’t miss our future updates! Get Subscribed Today!</a>
+
+            <form action="#" method="post" class="subscribe-form">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-email"><i class="fas fa-envelope"></i></button>
+            </form>
+        </div>
+        
+       </div>
+    </section>
+
+       <div class="credit">
+       <h6 > © Copyright 2023 Accounting Cloud . All Rights Reserved.</h6>
+       </div>
+   
+
+    <!-- footer section ends -->
+
+
+    <script>
+ document.addEventListener('DOMContentLoaded', function() {
+    const serviceItems = document.querySelectorAll('.service-item');
+    
+    function animateOnScroll() {
+        serviceItems.forEach((item, index) => {
+            const itemTop = item.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            if (itemTop < screenHeight * 0.75) {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, index * 300); // Adjust delay as needed
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cardContainers = document.querySelectorAll('.cardcontainer');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px', // Adjust root margin as needed
+        threshold: 0.5 // Trigger when 50% of the element is in viewport
+    });
+
+    cardContainers.forEach(container => {
+        observer.observe(container);
+    });
+});
+
+
+    </script>
+</body>
+
+</html>
