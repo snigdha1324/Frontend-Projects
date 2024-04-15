@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GST Filing</title>   
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="stylesheet" href="header-footer.css" />
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+.arrow-icon {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+}
+
+/* CSS for the backgound image */
+
+
+/* Additional CSS */
+/* Your existing CSS styles go here */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: #3ac0ce;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bdc89e;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+.home1 {
+    padding-top: 7rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home1 .top-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+    padding: 0 5%;
+    margin-bottom: 2rem;
+}
+
+.home1 .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.home1 .value {
+    flex: 1;
+    max-width: 100%;
+    border: 1px solid #bdc89e3a;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.home1 .value h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.home1 .content .value h2 i {
+    color: #f9485d; /* Set the color of the icon */
+    font-size: 2rem !important; /* Increase the size of the icon */
+    margin-right: 1rem;
+
+}
+
+
+
+.home1-btn-container {
+    width: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.home1-btn {
+    padding: 1.3rem 2rem;
+    background-color: #f9485d;
+    color: #ffe9e9;
+    font-size: 1.4rem;
+    border: 2px solid #f9485d;
+    border-radius: .5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.home1-btn:hover {
+    background-color: #f9485da4;
+    box-shadow: none;
+    color: #fff;
+}
+
+.home2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: -10rem;
+
+}
+
+.home2 .image {
+    flex: 1 1 45rem;
+}
+
+.home2 .image img {
+    width: 100%;
+}
+
+.home2 .content {
+    flex: 1 1 50rem;
+}
+
+.home2 .content h1 {
+    font-size: 3.7rem;
+    padding-block-end: 1rem 0;
+    color: #333;
+    margin-bottom: 2%;
+}
+
+.home2 .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 60rem;
+    color: #666;
+    padding-bottom: 4rem;
+}
+
+.home2 .content .home-btn {
+    padding: 1.3rem 2rem;
+    background-color: #f9485d;
+    color: #ffe9e9;
+    font-size: 1.4rem;
+    border: 2px solid #f9485d;
+    border-radius: .5rem;
+margin: 1%;}
+
+.home2 .content .home-btn:hover {
+    background-color: #f9485da4;
+    box-shadow: none;
+    color: #fff;
+}
+
+/*home*/
+.home {
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .image {
+    flex: 1 1 45rem;
+}
+
+.home .image img {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.home .content {
+    flex: 1 1 45rem;
+}
+
+.home .content h1 {
+    font-size: 3.7rem;
+    padding-block-end: 1rem 0;
+    color: #333;
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: #666;
+    padding-bottom: 4rem;
+}
+
+.home .content .home-btn {
+    padding: 1.3rem 2rem;
+    background-color: #f9485d;
+    color: #ffe9e9;
+    font-size: 1.4rem;
+    border: 2px solid #f9485d;
+    border-radius: .5rem;
+margin: 1%;}
+
+.home .content .home-btn:hover {
+    background-color: #f9485da4;
+    box-shadow: none;
+    color: #fff;
+}
+/* home-header ends*/
+
+/* dropdown starts*/
+.our-services .content {
+    text-align: center;
+}
+
+.our-services .content h1 {
+    
+    font-size: 3.5rem; /* Adjust the font size as per your preference */
+    padding-block-end: 1rem 0;
+    color: #333;
+}
+.our-services .content p {
+    
+    font-size: 1.7rem; /* Adjust the font size as per your preference */
+    padding-block-end: 1rem 0;
+    color: #333;
+}
+.whyus1 {
+    padding: 4rem; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Set background color */
+    margin-bottom: 5%;
+}
+
+.whyus1 .content {
+    max-width: 1200px; /* Set maximum width */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: center; /* Center-align the content */
+}
+
+.whyus1 h1 {
+    font-size: 3.5rem; /* Adjust font size */
+    color: #333; /* Set text color */
+    margin-bottom: 2rem; /* Adjust bottom margin */
+}
+
+.whyus1 .choose {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem; /* Adjust gap between elements */
+}
+
+.whyus1 .choose ul {
+    list-style: none;
+    padding: 0;
+}
+
+.whyus1 .choose li {
+    text-align: left; /* Align text to the left */
+}
+
+.whyus1 .choose h2 {
+    font-size: 2rem; /* Adjust font size */
+    color: #333; /* Set text color */
+    margin-bottom: 1rem; /* Adjust bottom margin */
+    display: flex;
+    align-items: center;
+}
+
+.whyus1 .choose h2 i {
+    margin-right: 1rem; /* Adjust spacing between icon and text */
+    color: #f9485d; /* Set icon color */
+}
+
+.whyus1 .choose p {
+    font-size: 1.6rem; /* Adjust font size */
+    color: #666; /* Set text color */
+    line-height: 1.8; /* Adjust line height */
+}
+/*home 3 ul*/
+
+.home3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: -10rem;
+
+}
+
+.home3 .image {
+    flex: 1 1 45rem;
+}
+
+.home3 .image img {
+    width: 100%;
+}
+
+.home3 .content {
+    flex: 1 1 50rem;
+}
+
+.home3 .content h1 {
+    font-size: 3.7rem;
+    padding-block-end: 1rem 0;
+    color: #333;
+    margin-bottom: 2%;
+}
+
+
+.home3 .choose {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem; /* Adjust gap between elements */
+}
+
+.home3  .choose ul {
+    list-style: none;
+    padding: 0;
+}
+
+.home3 .choose li {
+    text-align: left; /* Align text to the left */
+}
+
+.home3  .choose h2 {
+    font-size: 2rem; /* Adjust font size */
+    color: #409ea8; /* Set text color */
+    margin-bottom: 1rem; /* Adjust bottom margin */
+    display: flex;
+    align-items: center;
+}
+
+
+.home3  .choose p {
+    font-size: 1.6rem; /* Adjust font size */
+    color: #666; /* Set text color */
+    line-height: 1.8; /* Adjust line height */
+    margin-bottom: 2%;
+}
+/* Progress Bar Container */
+/* Progress Bar Container */
+/* Progress Bar Container */
+.progress-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Progress Info */
+.progress-info p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 20px;
+    height: 10px;
+    width: 300px; /* Adjust width as needed */
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Progress */
+.progress {
+    background-color: #f9485d;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 20px;
+}
+
+/* Steps Container */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10%;
+}
+
+/* Individual Step */
+.step {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+margin: 1%;}
+
+.step span {
+    font-size:20px;
+    font-weight: bold;
+    color: #df4848;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Hover Effect */
+.step:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+</style>
+</head>
+<body>
+ <!-- navbar sections starts  -->
+ <header class="header">
+    <a href="homepage1.html" class="logo">
+        <img src="https://accountingcloud.in/wp-content/uploads/2023/10/cropped-cropped-cropped-CompressJPEG.online_512x512_image-1.jpg" alt="logo-bookmark">
+    </a>
+
+  <!-- Inside the <nav> element -->
+<nav class="navbar">
+    <a href="homepage1.html">Home</a>
+
+    <a href="aboutus.html">About Us</a>
+    <div class="dropdown"  onmouseover="showDropdown()">
+    <a href="#services">Services <span class="arrow-icon">&#xf0d7;</span></a>
+    <div class="dropdown-content">
+        <a href="bookkeeping.html">Bookkeeping</a>
+        <a href="CFO.HTML">CFO</a>
+        <a href="ARANDAP.HTML">AR & AP</a>
+        <a href="TAX Filing.HTML">Tax Filing</a>
+        <a href="GST Filing.HTML">GST Filing</a>
+        <a href="TENDERS & PROJECTIONS.HTML">Tenders & Projections</a>
+        <!-- Add more services as needed -->
+    </div>
+</div>
+<a href="pricing.html">Pricing</a>
+<div class = "dropdown"  onmouseover="showDropdown()">
+<a href="#">Support<span class="arrow-icon">&#xf0d7;</span></a>
+<div class="dropdown-content">
+    <a href="BLOGS.HTML">Blogs</a>
+    <a href="FAQS.html">FAQs</a>
+</div>
+</div>
+<a href="contact.html">Contact Us</a>
+
+<a href="#" class="btn">Log in</a>
+<a href="#" class="btn">Sign up</a>
+</nav>
+
+
+    <div class="fas fa-bars" id="menu-btn"></div>
+
+</header>
+
+<!-- navbar sections ends  -->
+<hr>
+
+<!-- home section stars  -->
+
+<section class="home" id="home">
+    
+   
+    <div class="content">
+        <h1>GST FILING</h1>
+        <p>
+            Welcome to our professional GST filing services. We recognize the crucial significance of effortless tax compliance in the modern business environment, and e are dedicated to providing you with a comprehensive array of advantages and features designed to simplify and optimize your GST filing process.
+            </p>
+
+            <a href="#form-section" class="home-btn">Learn More</a>
+        </div>
+        <div class="image">
+            <img src="images/gsttop.jpg" alt="yet-to-come">
+        </div>
+</section>
+
+
+<section class="home2" id="home2">
+    
+    <div class="image">
+        <img src="images/gsttop2.png" alt="yet-to-come">
+    </div>
+    <div class="content">
+        <h1>GST Filing Services</h1>
+        <p>
+            Our GST filing services” denote the specialized assistance and support for GST filing offered by our accounting cloud experts. These services encompass everything needed to efficiently and accurately manage the GST filing process, ensuring that clients meet their tax obligations and stay in compliance with relevant regulations. This can include services such as data collection, tax return preparations, submission, and guidance to ensure a smooth and trouble-free experience for business and individuals.
+            </p>
+
+            <a href="contact.html" class="home-btn">Contact Us</a>
+        </div>
+      
+</section>
+<section class="our-services" id="our-services">
+    <div class="content" style="text-align: center;">
+        <h1>Our Services</h1>
+        <p> Our professional GST filing services offer numerous advantages, such as: </p>
+    </div>
+</section>
+<section class="home1" id="home1">
+    <div class="content">
+        <div class="value">
+            <h2><i class="fas fa-user-plus big-red"></i> GST Registrations</h2>
+        </div>
+        <div class="value">
+            <h2><i class="fas fa-file-alt big-red"></i> GST Return Filing</h2>
+        </div>
+        <div class="value">
+            <h2><i class="fas fa-hands-helping big-red"></i> GST Audit Assistance</h2>
+        </div>
+    </div>
+    <div class="content">
+        <div class="value">
+            <h2><i class="fas fa-money-check-alt big-red"></i> GST Refund Processing</h2>
+        </div>
+        <div class="value">
+            <h2><i class="fas fa-balance-scale big-red"></i> GST Compliance and Advisory</h2>
+        </div>
+        <div class="value">
+            <h2><i class="fas fa-tasks big-red"></i> Input Tax Credit Management</h2>
+        </div>
+    </div>
+    <div class="home1-btn-container">
+        <a href="#" class="home1-btn">more info</a>
+    </div>
+</section>
+
+<section class="whyus1" id="whyus1">
+    <div class="content">
+        <h1>Why Choose Us?</h1>
+        <div class="choose">
+            <ul style="list-style-type: none;">
+                <li>
+                    <h2><i class="fas fa-check-circle"></i> Effortless Sign-Up</h2>
+                    <p>Our simple sign-up process begins with a friendly conversation to grasp your immediate needs and understand your business requirements thoroughly.</p>
+                </li>
+                <li>
+                    <h2><i class="fas fa-chart-line"></i> Monthly Accounting Made Easy</h2>
+                    <p>Trust our dedicated team to meticulously organize your business transactions and prepare accurate financial statements every month. We'll keep you informed and reach out if we need any additional information.</p>
+                </li>
+                <li>
+                    <h2><i class="fas fa-file-alt"></i> Seamless GST Filings</h2>
+                    <p>Stay compliant with the latest GST regulations effortlessly. We'll summarize your input and output credits and ensure timely filing of your monthly GST returns, leveraging insights from your business.</p>
+                </li>
+                <li>
+                    <h2><i class="fas fa-money-bill-wave"></i> Tax-Ready Financials</h2>
+                    <p>Our comprehensive monthly financial reports enable you to monitor your business's financial health effectively. When tax season arrives, we'll provide all necessary documentation required for ITR filing. Alternatively, opt for our premium plans, and we'll handle the entire e-filing process for you.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+  
+</section>
+
+<section class="home3" id="home3">
+    
+    <div class="image">
+        <img src="images/gstpiccss.jpg" alt="yet-to-come">
+    </div>
+    <div class="content">
+        <h1>
+            Features of Our GST Filings</h1>
+            <div class="choose">
+                <ul style="list-style-type: none;">
+                    <li>
+                        <h2>Dedicated Account Manager
+                        </h2>
+                        <p>Integrate our services seamlessly with your existing accounting systems for efficient data management and filing.</p>
+                    </li>
+                    <li>
+                        <h2> Seamless Integration</h2>
+                        <p>Our integration seamlessly ensures smooth interactions across diverse systems and processes.</p>
+                    </li>
+                    <li>
+                        <h2>Secure Data Handling</h2>
+                        <p>Be assure that we handle your sensitive financial data securely, following strict privacy protocols.</p>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+      
+</section>
+<section class="our-services" id="our-services">
+    <div class="content" style="text-align: center;">
+        <h1>How our GST filing service works</h1>
+       
+    </div>
+</section>
+<div class="progress-container">
+    <div class="progress-info">
+        <p>Progress</p>
+    </div>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+</div>
+
+<div class="steps">
+    <div class="step" id="step1">
+        <span>STEP 1</span>
+        <p>Provide us with your financial data and relevant documents.</p>
+    </div>
+    <div class="step" id="step2">
+        <span>STEP 2</span>
+        <p>Our experts review and reconcile your data for accurate filing.</p>
+    </div>
+    <div class="step" id="step3">
+        <span>STEP 3</span>
+        <p>We prepare and submit your GST returns on your behalf.</p>
+    </div>
+</div>
+
+<div class="progress-container">
+    <div class="progress-info">
+    </div>
+
+</div>
+
+<section class="home2" id="home2">
+    
+    <div class="image">
+        <img src="images/gstcontactlast.png" alt="yet-to-come">
+    </div>
+    <div class="content">
+        <h1>   Ready to streamline your GST filing?
+        </h1>
+
+
+            <P>Contact our knowledgeable team today to learn more about our services and get started. contact now!
+            </p>
+
+            <a href="contact.html" class="home-btn">Contact Us</a>
+        </div>
+<section class="footer" id="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-chevron-right"></i>Services<span class="arrow-icon">&#xf0d7;</span></a>
+                <div class="dropdown-content">
+                    <a href="bookkeeping.html">Bookkeeping</a>
+            <a href="CFO.HTML">CFO</a>
+            <a href="ARANDAP.HTML">AR & AP</a>
+            <a href="TAX Filing.HTML">Tax Filing</a>
+            <a href="GST Filing.HTML">GST Filing</a>
+            <a href="TENDERS & PROJECTIONS.HTML">Tenders & Projections</a>
+                    <!-- Add more services as needed -->
+                </div>
+            </div>
+            <a href="#"><i class="fas fa-chevron-right"></i>Pricing</a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-chevron-right"></i>Support<span class="arrow-icon">&#xf0d7;</span></a>
+                <div class="dropdown-content">
+                    <a href="BLOGS.HTML">Blogs</a>
+                    <a href="FAQS.html">FAQs</a>
+                    <!-- Add more support links as needed -->
+                </div>
+            </div>
+        </div>
+
+           <div class="box">
+               <h3>Contact Us</h3>
+      
+               <a href="https://www.google.com/maps/place/Gowra+FountainHead/@17.4437971,78.3805477,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb93e01511d911:0x104e7368bcfb0af1!8m2!3d17.443792!4d78.3831226!16s%2Fg%2F11f3rxzhkr?entry=ttu" target="_blank"><i class="fas fa-map-marker-alt"></i>Unit No.709, Gowra FountainHead, HUDA Techno Enclave, Hyderabad, Telangana – 500081 info@accountingcloud.in</a>
+               <a href="#"><i class="fas fa-envelope"></i> info@accountingcloud.in</a>
+
+               <a href="#"><i class="fas fa-phone"></i> +91 89779 44578</a>
+           </div>
+
+           <div class="box">
+            <h3>Subscribe Now</h3>
+            <a href="#">Don’t miss our future updates! Get Subscribed Today!</a>
+
+            <form action="#" method="post" class="subscribe-form">
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-email"><i class="fas fa-envelope"></i></button>
+            </form>
+        </div>
+        
+       </div>
+    </section>
+
+       <div class="credit">
+       <h6 > © Copyright 2023 Accounting Cloud . All Rights Reserved.</h6>
+       </div>
+   
+
+    <!-- footer section ends -->
+
+<script>
+    // Add scroll event listener
+window.addEventListener('scroll', function() {
+    // If the page is scrolled
+    if (window.scrollY > 0) {
+        // Add the "scrolled" class to the body
+        document.body.classList.add('scrolled');
+    } else {
+        // Remove the "scrolled" class from the body
+        document.body.classList.remove('scrolled');
+    }
+});
+const steps = document.querySelectorAll('.step');
+const progress = document.getElementById('progress');
+
+steps.forEach((step, index) => {
+    step.addEventListener('mouseover', () => {
+        progress.style.width = `${(index + 1) * 33.33}%`;
+    });
+});
+
+</script>
+</body>
+
+</html>

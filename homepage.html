@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+.arrow-icon {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+}
+
+.header .logo img {
+    width: 120px;
+    height: auto;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: #3ac0ce;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bdc89e;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.heading h1 {
+    padding-bottom: 2rem;
+}
+
+.heading p {
+    max-width: 60rem;
+    margin: auto;
+    color: #666;
+    font-size: 1.7rem;
+}
+
+.all-btn {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background-color: #3ac0ce;
+    border-radius: .5rem;
+    color: #fff;
+}
+
+.all-btn:hover {
+    background-color: transparent;
+    color: #3ac0ce;
+    border: 2px solid #3ac0ce;
+}
+
+.header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 0;
+    z-index: 10000;
+    background-color: #fff;
+    box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .navbar a {
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+    color: #3ac0ce;
+}
+
+.header .navbar .btn {
+    padding: .6rem 3rem;
+    background-color: #3ac0ce;
+    color: #fff;
+    border-radius: .5rem;
+}
+
+
+.header .navbar .btn:hover {
+    color: #3ac0ce;
+    background-color: transparent;
+   
+}
+
+#menu-btn {
+    padding: 1rem 1rem;
+    background-color: #eee;
+    font-size: 3rem;
+    color: #2196F3;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        box-shadow: 0.5rem 0.5rem 0 hsla(231, 69%, 60%);
+        width: 33rem;
+        border-radius: .5rem;
+        border: 2px solid #2196F3;
+        background-color: #fff;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+    }
+
+    .header .navbar a {
+        margin: 2.5rem;
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+
+.home {
+    padding-top: 15rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .image {
+    flex: 1 1 45rem;
+}
+
+.home .image img {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.home .content {
+    flex: 1 1 45rem;
+}
+
+.home .content h1 {
+    font-size: 2.75rem;
+    padding-block-end: 1rem 0;
+    color: #333;
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: #666;
+    padding-bottom: 4rem;
+}
+
+.home .content .home-btn {
+    padding: 1.3rem 2rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.4rem;
+    border: 2px solid #a0b284;
+    border-radius: .5rem;
+}
+
+.home .content .home-btn:hover {
+    background-color: #a0b284;
+    box-shadow: none;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition-delay: 10s;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.features .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 3rem 0;
+}
+
+.features .row .image {
+    flex: 1 1 45rem;
+}
+
+.features .row .image img {
+    width: 100%;
+}
+
+.features .row .content {
+    flex: 1 1 45rem;
+}
+
+.features .row .content h1 {
+    font-size: 4rem;
+    padding: 1rem 0;
+    color: #333;
+}
+
+.features .row .content p {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    color: #666;
+    padding-bottom: 4rem;
+}
+
+.download .box-container {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.download .box {
+    border: 2px solid #3ac0ce;
+    box-shadow: .5rem .5rem #3ac0ce;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.download .box:hover {
+    border: 2px solid #3ac0ce;
+    box-shadow: none;
+}
+
+.download .box h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #333;
+}
+
+.download .box p {
+    font-size: 1.7rem;
+    padding-bottom: 2.5rem;
+    color: #666;
+}
+.footer{
+    background-color:  #bdc89eaf;;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+   
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #000;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: #000000;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+    color: #4CAF50;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 1rem;
+}
+
+ .credit {
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #000;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+ .credit span {
+    color: #F44336;
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- navbar sections starts  -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="https://accountingcloud.in/wp-content/uploads/2023/10/cropped-cropped-cropped-CompressJPEG.online_512x512_image-1.jpg" alt="logo-bookmark">
+        </a>
+        
+
+      <!-- Inside the <nav> element -->
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <div class="dropdown"  onmouseover="showDropdown()">
+        <a href="#services">Services <span class="arrow-icon">&#xf0d7;</span></a>
+        <div class="dropdown-content">
+            <a href="#">Bookkeeping</a>
+            <a href="#">CFO</a>
+            <a href="#">AR & AP</a>
+            <a href="#">Tax Filing</a>
+            <a href="#">GST Filing</a>
+            <a href="#">Tenders & Projections</a>
+            <!-- Add more services as needed -->
+        </div>
+    </div>
+    <a href="#download">Pricing</a>
+    <div class = "dropdown"  onmouseover="showDropdown()">
+    <a href="#services">Support<span class="arrow-icon">&#xf0d7;</span></a>
+    <div class="dropdown-content">
+        <a href="#">Blogs</a>
+        <a href="#">FAQs</a>
+    </div>
+    </div>
+    <a href="#" class="btn">Log in</a>
+    <a href="#" class="btn">Sign up</a>
+</nav>
+
+
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+    <!-- navbar sections starts  -->
+
+   
+    <!-- home section stars  -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h1>Experience quick, friendly, year-end support from our expert accounting team.</h1>
+            <p>We’re here to make running your business easier. Month-on-month and year-end, our team of professional accountants will ensure your books are in perfect financial harmony.</p>
+
+            <a href="#" class="home-btn">Get Started</a>
+        </div>
+
+
+        <div class="image">
+            <img src="images/illustration-hero.svg" alt="illustration-hero">
+        </div>
+    </section>
+
+    <!-- home section ends -->
+
+   
+
+    <section class="features" id="features">
+        <div class="heading">
+            <h1>Features</h1>
+            <p>Our aim is to make it quick and easy for you to access your favorite websites. your bookmarks sync between your devices so you can access them on the go</p>
+        </div>
+
+
+        <div class="row">
+            <!-- 1 Tab  -->
+            <div class="image">
+                <img src="images/illustration-features-tab-1.svg" alt="illustration-features-tab-1">
+            </div>
+
+
+            <div class="content">
+                <h1>Bookmark in one click</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sint odit tempora, maiores quos qui quisquam accusamus ad officiis sapiente.</p>
+                <a href="#" class="all-btn">more info</a>
+            </div>
+
+            <!-- 1 Tab  -->
+
+            <!-- 2 Tab  -->
+            <div class="content">
+                <h1>Intelligent search</h1>
+                <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                <a href="#" class="all-btn">more info</a>
+            </div>
+
+            <div class="image">
+                <img src="images/illustration-features-tab-2.svg" alt="illustration-features-tab-2">
+            </div>
+
+            <!-- 2 Tab  -->
+
+            <div class="image">
+                <img src="images/illustration-features-tab-3.svg" alt="illustration-features-tab-3">
+            </div>
+
+            <div class="content">
+                <h1>Share your bookmarks</h1>
+                <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                <a href="#" class="all-btn">more info</a>
+            </div>
+
+
+            <!-- 3 Tab  -->
+
+        </div>
+    </section>
+
+
+    <!-- features sectin ends -->
+
+
+    <!-- downloads section starts  -->
+
+    <section class="download" id="download">
+        <div class="heading">
+            <h1>Download Extension</h1>
+            <p>We've got more browsers in the pipeline. Please do le us know if you got've got a favorite you'd like us to prioritize</p>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="images/logo-chrome.svg" alt="logo-chrome">
+
+                <h3>Add to Chrome</h3>
+                <p>Minimum Version 63</p>
+                <a href="#" class="all-btn">install</a>
+            </div>
+
+            <div class="box">
+                <img src="images/logo-firefox.svg" alt="logo-firefox">
+
+                <h3>Add to Firefox</h3>
+                <p>Minimum Version 55</p>
+                <a href="#" class="all-btn">install</a>
+            </div>
+
+            <div class="box">
+                <img src="images/logo-opera.svg" alt="logo-opera">
+
+                <h3>Add to Opera</h3>
+                <p>Minimum Version 46</p>
+                <a href="#" class="all-btn">install</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- downloads section ends -->
+
+
+
+    <!-- footer section starts  -->
+
+   <section class="footer" id="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-chevron-right"></i>Services<span class="arrow-icon">&#xf0d7</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Bookkeeping </a>
+                    <a href="#">CFO</a>
+                    <a href="#"> AR & AP</a>
+                    <a href="#"> Tax Filing</a>
+                    <a href="#">GST Filing</a>
+                    <a href="#">Tenders & Projections</a>
+                    <!-- Add more services as needed -->
+                </div>
+            </div>
+            <a href="#"><i class="fas fa-chevron-right"></i>Pricing</a>
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-chevron-right"></i>Support<span class="arrow-icon">&#xf0d7</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Blogs</a>
+                    <a href="#">FAQs</a>
+                    <!-- Add more support links as needed -->
+                </div>
+            </div>
+        </div>
+
+           <div class="box">
+               <h3>Contact Us</h3>
+      
+               <a href="#"><i class="fas fa-map-marker-alt"></i>Unit No.709, Gowra FountainHead, HUDA Techno Enclave, Hyderabad, Telangana – 500081 info@accountingcloud.in</a>
+               <a href="#"><i class="fas fa-envelope"></i> info@accountingcloud.in</a>
+
+               <a href="#"><i class="fas fa-phone"></i> +91 89779 44578</a>
+           </div>
+
+           <div class="box">
+               <h3>Subscribe Now</h3>
+               <p>Don’t miss our future updates! Get Subscribed Today!</p>
+               <a href="#" class="btn">Sign up</a>
+           </div>
+       </div>
+    </section>
+
+       <div class="credit">
+       <h6> © Copyright 2023 Accounting Cloud . All Rights Reserved.</h6>
+       </div>
+   
+
+    <!-- footer section ends -->
+
+
+    <script>
+        let menu = document.querySelector("#menu-btn")
+let navbar = document.querySelector(".navbar")
+
+
+menu.onclick = () =>{
+    menu.classList.toggle("fa-times")
+    navbar.classList.toggle("active")
+}
+
+
+window.onscroll = () =>{
+    menu.classList.remove("fa-times")
+    navbar.classList.remove("active")
+}
+
+    function showDropdown() {
+        let dropdownContent = document.querySelector('.dropdown-content');
+        let items = dropdownContent.querySelectorAll('a');
+        let delay = 100; // Adjust the delay time in milliseconds
+        let index = 0;
+
+        // Display each submenu item with a delay
+        items.forEach((item) => {
+            setTimeout(() => {
+                item.style.display = 'block';
+            }, index * delay);
+            index++;
+        });
+    }
+
+
+
+    </script>
+</body>
+
+</html>
