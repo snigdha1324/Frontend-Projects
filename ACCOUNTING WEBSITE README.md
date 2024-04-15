@@ -23,6 +23,7 @@ How to View the Website
 Download or clone the repository to your local machine.
 Open the HTML files using a web browser to view the different pages of the website.
 Ensure that the CSS files and image folder are in the same directory as the HTML files to display the website with styles and images.
+Ensure that the images folder inside the website folder named "images" . The website folder includes the images folder , HTML files  and a header-footer CSS file
 
 Dependencies
 
